@@ -23,9 +23,8 @@ body {
     height: 100%;
     width: 40px;
   }
-  #menu .menuBurger img {
-    max-height: 90%;
-    margin-left: 5px;
+  #menu .menuBurger .fas {
+    color: #00A651;
   }
   #menu .menuWeek {
     display: flex;

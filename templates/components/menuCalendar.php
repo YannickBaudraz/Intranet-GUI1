@@ -3,7 +3,7 @@ ob_start();
 ?>
     <div id="menu">
         <div class="menuBurger">
-            <img src="templates/content/svg/menu.svg" alt="menu burger"/>
+            <i class="fas fa-bars fa-2x"></i>
         </div>
 
         <div class="menuWeek">
