@@ -1,4 +1,5 @@
 <?php
+
 ob_start();
 ?>
     <div id="menu">
@@ -15,5 +16,6 @@ ob_start();
         </div>
         <div class="week-dayButton"><i class="fas fa-calendar-week"></i></div>
     </div>
+    <div class="after-menu"></div>
 <?php
 $header = ob_get_clean();

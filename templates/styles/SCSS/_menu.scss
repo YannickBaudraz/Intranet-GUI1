@@ -1,0 +1,68 @@
+/* place here CSS targeted at iPads and smaller, including iPhones and small hand-held devices */
+#menu {
+  position: fixed;
+  top: 0;
+  border-bottom: 3px solid $vert-clair;
+  width: 100%;
+  height: 40px;
+  border-bottom-right-radius: 3px;
+  border-bottom-left-radius: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: inherit;
+
+  .menuBurger {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 40px;
+
+    .fas {
+      color: $vert-clair;
+    }
+  }
+
+  .menuWeek {
+    display: flex;
+    text-align: center;
+    width: 80%;
+    justify-content: center;
+
+    .fas {
+      font-size: 1.7em;
+      color: $bleu;
+    }
+
+    span {
+      color: $vert-clair;
+      padding-left: 4px;
+      padding-right: 4px;
+    }
+  }
+
+  .week-dayButton {
+    display: flex;
+    background-color: $bleu;
+    height: 80%;
+    width: 40px;
+    border-radius: 7px;
+    justify-content: center;
+    margin-right: 10px;
+    align-items: center;
+
+    .fas {
+      font-size: 1.3em;
+      text-align: center;
+      color: white;
+    }
+  }
+
+  + .after-menu {
+    width: 100%;
+    margin-top: 40px;
+  }
+}
+
+
