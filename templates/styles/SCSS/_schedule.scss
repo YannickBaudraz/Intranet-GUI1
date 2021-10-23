@@ -1,0 +1,33 @@
+/*****************
+ * GRID SCHEDULE
+ *****************/
+.schedule {
+  display: grid;
+  grid-gap: .5em;
+  grid-template-rows: getScheduleTemplateRows();
+  grid-template-columns: getScheduleTemplateColumns();
+
+  .track-slot {
+    display: block;
+    padding: 10px 5px 5px;
+  }
+}
+
+.time-slot {
+  grid-column: times;
+  transform: translateY(-.75rem);
+}
+
+.track-slot, .time-slot {
+  font-weight: 400;
+}
+
+.info {
+  padding: .5rem;
+  background-color: $magenta;
+  color: $text-color-dark;
+  border-radius: 10px;
+}
+
+@include scheduleRowsClasses;
+@include scheduleColumnsClasses;
