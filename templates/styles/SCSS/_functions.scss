@@ -1,0 +1,53 @@
+/// Get a list of rows for the schedule template.
+/// Start at 08:00 and end at 17:00 with an interval of 00:05 for each row.
+/// Format :  ([tracks] auto)
+///           ([info] auto)
+///           ([time-0800] auto)
+///           ([time-0805] auto)
+///           etc...
+///
+///
+/// @return {list} Rows used in the `grid-template-rows` style.
+@function getScheduleTemplateRows() {
+  $rows: ([tracks] auto) ([info] auto);
+  $hour: 8;
+  $min: 0;
+
+  @while $hour < 17 {
+    @if $min == 60 {
+      $hour: $hour + 1;
+      $min: 0;
+    }
+
+    $hourStr: if($hour < 10, '0#{$hour}', #{$hour});
+    $minStr: if($min == 0, '#{$min}0', if($min == 5, '0#{$min}', #{$min}));
+
+    $rows: append($rows, [time-#{$hourStr}#{$minStr}] auto, space);
+
+    $min: $min + 5;
+  }
+
+  @return $rows;
+}
+
+/// Get a list of columns for the schedule template.
+///
+/// @return [list] Columns used in the `grid-template-columns` style.
+@function getScheduleTemplateColumns() {
+  @return ([times] auto) ([mo] 1fr) ([tu] 1fr) ([we] 1fr) ([th] 1fr) ([fr] 1fr) ([end-week]);
+}
+
+/// Convert a list to a long string.
+///
+/// @param {list} The list to convert.
+///
+/// @return [string] The string converted from the list.
+@function listToString($list) {
+  $result: null;
+
+  @each $element in $list {
+    $result: #{$result $element};
+  }
+
+  @return $result;
+}

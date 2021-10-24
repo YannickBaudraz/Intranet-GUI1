@@ -1,0 +1,39 @@
+@mixin scheduleRowsClasses() {
+  @each $row in getScheduleTemplateRows() {
+    $row: listToString($row);
+    $startSlice: str-index($row, '[');
+    $endSlice: str-index($row, ']');
+    @if $startSlice and $endSlice {
+      $str: str-slice($row, $startSlice + 1, $endSlice - 1);
+      .row-s-#{$str} { grid-row-start: #{$str} }
+      .row-e-#{$str} { grid-row-end: #{$str} }
+    }
+  }
+}
+
+@mixin scheduleColumnsClasses() {
+  .col-s-week { grid-column-start: mo }
+  @each $col in getScheduleTemplateColumns() {
+    $col: listToString($col);
+    $startSlice: str-index($col, '[');
+    $endSlice: str-index($col, ']');
+    @if $startSlice and $endSlice {
+      $str: str-slice($col, $startSlice + 1, $endSlice - 1);
+      .col-s-#{$str} { grid-column-start: #{$str} }
+      .col-e-#{$str} { grid-column-end: #{$str} }
+    }
+  }
+  .col-e-week { grid-column-end: end-week }
+}
+
+@mixin createModuleType($typeClass, $module-background-color, $module-text-color) {
+  #{$typeClass} {
+    background-color: $module-background-color;
+    color: $module-text-color;
+    box-shadow: 4px 4px .2em darken($module-background-color, 5);
+
+    a:hover {
+      color: lighten($module-text-color, 5);
+    }
+  }
+}

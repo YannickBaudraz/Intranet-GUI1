@@ -1,4 +1,5 @@
 <?php
+
 require_once $headerPath;
 //require "View\Components\Footer.php";
 ?>
@@ -8,30 +9,34 @@ require_once $headerPath;
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
 
     <!-- CSS only -->
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link crossorigin="anonymous"
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
+          integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
+          rel="stylesheet">
     <link rel="stylesheet" href="templates/styles/CSS/global.css">
 
     <!-- JavaScript Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+
     <script src="https://kit.fontawesome.com/3f7b822457.js" crossorigin="anonymous"></script>
+    <title>Intranet GUI-1</title>
 </head>
 <body>
-<!-- HEADER -->
+    <!-- HEADER -->
     <?= $header; ?>
-<!--  /HEADER -->
+    <!--  /HEADER -->
 
-<!-- Page Content -->
+    <!-- Page Content -->
 
-<main class="container">
-    <?= $contenu; ?>
-</main>
-<!-- /.container -->
-<!-- FOOTER
- /FOOTER -->
+    <main class="container-fluid">
+        <?= $contenu; ?>
+    </main>
+    <!-- /.container -->
+    <!-- FOOTER
+     /FOOTER -->
 
 </body>
 </html>

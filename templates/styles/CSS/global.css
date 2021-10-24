@@ -1,5 +1,13 @@
 body {
+  font-size: 1rem;
+  color: #184c6d;
+  background-color: white;
   font-family: "Roboto", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+}
+@media screen and (max-width: 600px) {
+  body {
+    font-size: 0.75rem;
+  }
 }
 
 /* place here CSS targeted at iPads and smaller, including iPhones and small hand-held devices */
@@ -15,6 +23,7 @@ body {
   align-items: center;
   justify-content: space-between;
   background-color: inherit;
+  z-index: 1000;
 }
 #menu .menuBurger {
   display: flex;
@@ -59,6 +68,823 @@ body {
 #menu + .after-menu {
   width: 100%;
   margin-top: 40px;
+}
+
+/*****************
+ * GRID SCHEDULE
+ *****************/
+.schedule {
+  display: grid;
+  grid-gap: 0.25em;
+  grid-template-rows: [tracks] auto [info] auto [time-0800] auto [time-0805] auto [time-0810] auto [time-0815] auto [time-0820] auto [time-0825] auto [time-0830] auto [time-0835] auto [time-0840] auto [time-0845] auto [time-0850] auto [time-0855] auto [time-0900] auto [time-0905] auto [time-0910] auto [time-0915] auto [time-0920] auto [time-0925] auto [time-0930] auto [time-0935] auto [time-0940] auto [time-0945] auto [time-0950] auto [time-0955] auto [time-1000] auto [time-1005] auto [time-1010] auto [time-1015] auto [time-1020] auto [time-1025] auto [time-1030] auto [time-1035] auto [time-1040] auto [time-1045] auto [time-1050] auto [time-1055] auto [time-1100] auto [time-1105] auto [time-1110] auto [time-1115] auto [time-1120] auto [time-1125] auto [time-1130] auto [time-1135] auto [time-1140] auto [time-1145] auto [time-1150] auto [time-1155] auto [time-1200] auto [time-1205] auto [time-1210] auto [time-1215] auto [time-1220] auto [time-1225] auto [time-1230] auto [time-1235] auto [time-1240] auto [time-1245] auto [time-1250] auto [time-1255] auto [time-1300] auto [time-1305] auto [time-1310] auto [time-1315] auto [time-1320] auto [time-1325] auto [time-1330] auto [time-1335] auto [time-1340] auto [time-1345] auto [time-1350] auto [time-1355] auto [time-1400] auto [time-1405] auto [time-1410] auto [time-1415] auto [time-1420] auto [time-1425] auto [time-1430] auto [time-1435] auto [time-1440] auto [time-1445] auto [time-1450] auto [time-1455] auto [time-1500] auto [time-1505] auto [time-1510] auto [time-1515] auto [time-1520] auto [time-1525] auto [time-1530] auto [time-1535] auto [time-1540] auto [time-1545] auto [time-1550] auto [time-1555] auto [time-1600] auto [time-1605] auto [time-1610] auto [time-1615] auto [time-1620] auto [time-1625] auto [time-1630] auto [time-1635] auto [time-1640] auto [time-1645] auto [time-1650] auto [time-1655] auto [time-1700] auto;
+  grid-template-columns: [times] auto [mo] 1fr [tu] 1fr [we] 1fr [th] 1fr [fr] 1fr [end-week];
+}
+.schedule .track-slot {
+  display: block;
+  padding: 10px 5px 5px;
+  text-align: center;
+  font-weight: 500;
+}
+.schedule .time-slot {
+  grid-column: times;
+  transform: translateY(-0.75em);
+  margin-right: 0.5em;
+  font-weight: 400;
+}
+.schedule .info {
+  padding: 0.5em;
+  background-color: #a57;
+  color: #e9eef6;
+  border-radius: 10px;
+}
+.schedule .break {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #d7e0ed;
+  color: #000;
+  box-shadow: none;
+}
+.schedule .row-s-tracks {
+  grid-row-start: tracks;
+}
+.schedule .row-e-tracks {
+  grid-row-end: tracks;
+}
+.schedule .row-s-info {
+  grid-row-start: info;
+}
+.schedule .row-e-info {
+  grid-row-end: info;
+}
+.schedule .row-s-time-0800 {
+  grid-row-start: time-0800;
+}
+.schedule .row-e-time-0800 {
+  grid-row-end: time-0800;
+}
+.schedule .row-s-time-0805 {
+  grid-row-start: time-0805;
+}
+.schedule .row-e-time-0805 {
+  grid-row-end: time-0805;
+}
+.schedule .row-s-time-0810 {
+  grid-row-start: time-0810;
+}
+.schedule .row-e-time-0810 {
+  grid-row-end: time-0810;
+}
+.schedule .row-s-time-0815 {
+  grid-row-start: time-0815;
+}
+.schedule .row-e-time-0815 {
+  grid-row-end: time-0815;
+}
+.schedule .row-s-time-0820 {
+  grid-row-start: time-0820;
+}
+.schedule .row-e-time-0820 {
+  grid-row-end: time-0820;
+}
+.schedule .row-s-time-0825 {
+  grid-row-start: time-0825;
+}
+.schedule .row-e-time-0825 {
+  grid-row-end: time-0825;
+}
+.schedule .row-s-time-0830 {
+  grid-row-start: time-0830;
+}
+.schedule .row-e-time-0830 {
+  grid-row-end: time-0830;
+}
+.schedule .row-s-time-0835 {
+  grid-row-start: time-0835;
+}
+.schedule .row-e-time-0835 {
+  grid-row-end: time-0835;
+}
+.schedule .row-s-time-0840 {
+  grid-row-start: time-0840;
+}
+.schedule .row-e-time-0840 {
+  grid-row-end: time-0840;
+}
+.schedule .row-s-time-0845 {
+  grid-row-start: time-0845;
+}
+.schedule .row-e-time-0845 {
+  grid-row-end: time-0845;
+}
+.schedule .row-s-time-0850 {
+  grid-row-start: time-0850;
+}
+.schedule .row-e-time-0850 {
+  grid-row-end: time-0850;
+}
+.schedule .row-s-time-0855 {
+  grid-row-start: time-0855;
+}
+.schedule .row-e-time-0855 {
+  grid-row-end: time-0855;
+}
+.schedule .row-s-time-0900 {
+  grid-row-start: time-0900;
+}
+.schedule .row-e-time-0900 {
+  grid-row-end: time-0900;
+}
+.schedule .row-s-time-0905 {
+  grid-row-start: time-0905;
+}
+.schedule .row-e-time-0905 {
+  grid-row-end: time-0905;
+}
+.schedule .row-s-time-0910 {
+  grid-row-start: time-0910;
+}
+.schedule .row-e-time-0910 {
+  grid-row-end: time-0910;
+}
+.schedule .row-s-time-0915 {
+  grid-row-start: time-0915;
+}
+.schedule .row-e-time-0915 {
+  grid-row-end: time-0915;
+}
+.schedule .row-s-time-0920 {
+  grid-row-start: time-0920;
+}
+.schedule .row-e-time-0920 {
+  grid-row-end: time-0920;
+}
+.schedule .row-s-time-0925 {
+  grid-row-start: time-0925;
+}
+.schedule .row-e-time-0925 {
+  grid-row-end: time-0925;
+}
+.schedule .row-s-time-0930 {
+  grid-row-start: time-0930;
+}
+.schedule .row-e-time-0930 {
+  grid-row-end: time-0930;
+}
+.schedule .row-s-time-0935 {
+  grid-row-start: time-0935;
+}
+.schedule .row-e-time-0935 {
+  grid-row-end: time-0935;
+}
+.schedule .row-s-time-0940 {
+  grid-row-start: time-0940;
+}
+.schedule .row-e-time-0940 {
+  grid-row-end: time-0940;
+}
+.schedule .row-s-time-0945 {
+  grid-row-start: time-0945;
+}
+.schedule .row-e-time-0945 {
+  grid-row-end: time-0945;
+}
+.schedule .row-s-time-0950 {
+  grid-row-start: time-0950;
+}
+.schedule .row-e-time-0950 {
+  grid-row-end: time-0950;
+}
+.schedule .row-s-time-0955 {
+  grid-row-start: time-0955;
+}
+.schedule .row-e-time-0955 {
+  grid-row-end: time-0955;
+}
+.schedule .row-s-time-1000 {
+  grid-row-start: time-1000;
+}
+.schedule .row-e-time-1000 {
+  grid-row-end: time-1000;
+}
+.schedule .row-s-time-1005 {
+  grid-row-start: time-1005;
+}
+.schedule .row-e-time-1005 {
+  grid-row-end: time-1005;
+}
+.schedule .row-s-time-1010 {
+  grid-row-start: time-1010;
+}
+.schedule .row-e-time-1010 {
+  grid-row-end: time-1010;
+}
+.schedule .row-s-time-1015 {
+  grid-row-start: time-1015;
+}
+.schedule .row-e-time-1015 {
+  grid-row-end: time-1015;
+}
+.schedule .row-s-time-1020 {
+  grid-row-start: time-1020;
+}
+.schedule .row-e-time-1020 {
+  grid-row-end: time-1020;
+}
+.schedule .row-s-time-1025 {
+  grid-row-start: time-1025;
+}
+.schedule .row-e-time-1025 {
+  grid-row-end: time-1025;
+}
+.schedule .row-s-time-1030 {
+  grid-row-start: time-1030;
+}
+.schedule .row-e-time-1030 {
+  grid-row-end: time-1030;
+}
+.schedule .row-s-time-1035 {
+  grid-row-start: time-1035;
+}
+.schedule .row-e-time-1035 {
+  grid-row-end: time-1035;
+}
+.schedule .row-s-time-1040 {
+  grid-row-start: time-1040;
+}
+.schedule .row-e-time-1040 {
+  grid-row-end: time-1040;
+}
+.schedule .row-s-time-1045 {
+  grid-row-start: time-1045;
+}
+.schedule .row-e-time-1045 {
+  grid-row-end: time-1045;
+}
+.schedule .row-s-time-1050 {
+  grid-row-start: time-1050;
+}
+.schedule .row-e-time-1050 {
+  grid-row-end: time-1050;
+}
+.schedule .row-s-time-1055 {
+  grid-row-start: time-1055;
+}
+.schedule .row-e-time-1055 {
+  grid-row-end: time-1055;
+}
+.schedule .row-s-time-1100 {
+  grid-row-start: time-1100;
+}
+.schedule .row-e-time-1100 {
+  grid-row-end: time-1100;
+}
+.schedule .row-s-time-1105 {
+  grid-row-start: time-1105;
+}
+.schedule .row-e-time-1105 {
+  grid-row-end: time-1105;
+}
+.schedule .row-s-time-1110 {
+  grid-row-start: time-1110;
+}
+.schedule .row-e-time-1110 {
+  grid-row-end: time-1110;
+}
+.schedule .row-s-time-1115 {
+  grid-row-start: time-1115;
+}
+.schedule .row-e-time-1115 {
+  grid-row-end: time-1115;
+}
+.schedule .row-s-time-1120 {
+  grid-row-start: time-1120;
+}
+.schedule .row-e-time-1120 {
+  grid-row-end: time-1120;
+}
+.schedule .row-s-time-1125 {
+  grid-row-start: time-1125;
+}
+.schedule .row-e-time-1125 {
+  grid-row-end: time-1125;
+}
+.schedule .row-s-time-1130 {
+  grid-row-start: time-1130;
+}
+.schedule .row-e-time-1130 {
+  grid-row-end: time-1130;
+}
+.schedule .row-s-time-1135 {
+  grid-row-start: time-1135;
+}
+.schedule .row-e-time-1135 {
+  grid-row-end: time-1135;
+}
+.schedule .row-s-time-1140 {
+  grid-row-start: time-1140;
+}
+.schedule .row-e-time-1140 {
+  grid-row-end: time-1140;
+}
+.schedule .row-s-time-1145 {
+  grid-row-start: time-1145;
+}
+.schedule .row-e-time-1145 {
+  grid-row-end: time-1145;
+}
+.schedule .row-s-time-1150 {
+  grid-row-start: time-1150;
+}
+.schedule .row-e-time-1150 {
+  grid-row-end: time-1150;
+}
+.schedule .row-s-time-1155 {
+  grid-row-start: time-1155;
+}
+.schedule .row-e-time-1155 {
+  grid-row-end: time-1155;
+}
+.schedule .row-s-time-1200 {
+  grid-row-start: time-1200;
+}
+.schedule .row-e-time-1200 {
+  grid-row-end: time-1200;
+}
+.schedule .row-s-time-1205 {
+  grid-row-start: time-1205;
+}
+.schedule .row-e-time-1205 {
+  grid-row-end: time-1205;
+}
+.schedule .row-s-time-1210 {
+  grid-row-start: time-1210;
+}
+.schedule .row-e-time-1210 {
+  grid-row-end: time-1210;
+}
+.schedule .row-s-time-1215 {
+  grid-row-start: time-1215;
+}
+.schedule .row-e-time-1215 {
+  grid-row-end: time-1215;
+}
+.schedule .row-s-time-1220 {
+  grid-row-start: time-1220;
+}
+.schedule .row-e-time-1220 {
+  grid-row-end: time-1220;
+}
+.schedule .row-s-time-1225 {
+  grid-row-start: time-1225;
+}
+.schedule .row-e-time-1225 {
+  grid-row-end: time-1225;
+}
+.schedule .row-s-time-1230 {
+  grid-row-start: time-1230;
+}
+.schedule .row-e-time-1230 {
+  grid-row-end: time-1230;
+}
+.schedule .row-s-time-1235 {
+  grid-row-start: time-1235;
+}
+.schedule .row-e-time-1235 {
+  grid-row-end: time-1235;
+}
+.schedule .row-s-time-1240 {
+  grid-row-start: time-1240;
+}
+.schedule .row-e-time-1240 {
+  grid-row-end: time-1240;
+}
+.schedule .row-s-time-1245 {
+  grid-row-start: time-1245;
+}
+.schedule .row-e-time-1245 {
+  grid-row-end: time-1245;
+}
+.schedule .row-s-time-1250 {
+  grid-row-start: time-1250;
+}
+.schedule .row-e-time-1250 {
+  grid-row-end: time-1250;
+}
+.schedule .row-s-time-1255 {
+  grid-row-start: time-1255;
+}
+.schedule .row-e-time-1255 {
+  grid-row-end: time-1255;
+}
+.schedule .row-s-time-1300 {
+  grid-row-start: time-1300;
+}
+.schedule .row-e-time-1300 {
+  grid-row-end: time-1300;
+}
+.schedule .row-s-time-1305 {
+  grid-row-start: time-1305;
+}
+.schedule .row-e-time-1305 {
+  grid-row-end: time-1305;
+}
+.schedule .row-s-time-1310 {
+  grid-row-start: time-1310;
+}
+.schedule .row-e-time-1310 {
+  grid-row-end: time-1310;
+}
+.schedule .row-s-time-1315 {
+  grid-row-start: time-1315;
+}
+.schedule .row-e-time-1315 {
+  grid-row-end: time-1315;
+}
+.schedule .row-s-time-1320 {
+  grid-row-start: time-1320;
+}
+.schedule .row-e-time-1320 {
+  grid-row-end: time-1320;
+}
+.schedule .row-s-time-1325 {
+  grid-row-start: time-1325;
+}
+.schedule .row-e-time-1325 {
+  grid-row-end: time-1325;
+}
+.schedule .row-s-time-1330 {
+  grid-row-start: time-1330;
+}
+.schedule .row-e-time-1330 {
+  grid-row-end: time-1330;
+}
+.schedule .row-s-time-1335 {
+  grid-row-start: time-1335;
+}
+.schedule .row-e-time-1335 {
+  grid-row-end: time-1335;
+}
+.schedule .row-s-time-1340 {
+  grid-row-start: time-1340;
+}
+.schedule .row-e-time-1340 {
+  grid-row-end: time-1340;
+}
+.schedule .row-s-time-1345 {
+  grid-row-start: time-1345;
+}
+.schedule .row-e-time-1345 {
+  grid-row-end: time-1345;
+}
+.schedule .row-s-time-1350 {
+  grid-row-start: time-1350;
+}
+.schedule .row-e-time-1350 {
+  grid-row-end: time-1350;
+}
+.schedule .row-s-time-1355 {
+  grid-row-start: time-1355;
+}
+.schedule .row-e-time-1355 {
+  grid-row-end: time-1355;
+}
+.schedule .row-s-time-1400 {
+  grid-row-start: time-1400;
+}
+.schedule .row-e-time-1400 {
+  grid-row-end: time-1400;
+}
+.schedule .row-s-time-1405 {
+  grid-row-start: time-1405;
+}
+.schedule .row-e-time-1405 {
+  grid-row-end: time-1405;
+}
+.schedule .row-s-time-1410 {
+  grid-row-start: time-1410;
+}
+.schedule .row-e-time-1410 {
+  grid-row-end: time-1410;
+}
+.schedule .row-s-time-1415 {
+  grid-row-start: time-1415;
+}
+.schedule .row-e-time-1415 {
+  grid-row-end: time-1415;
+}
+.schedule .row-s-time-1420 {
+  grid-row-start: time-1420;
+}
+.schedule .row-e-time-1420 {
+  grid-row-end: time-1420;
+}
+.schedule .row-s-time-1425 {
+  grid-row-start: time-1425;
+}
+.schedule .row-e-time-1425 {
+  grid-row-end: time-1425;
+}
+.schedule .row-s-time-1430 {
+  grid-row-start: time-1430;
+}
+.schedule .row-e-time-1430 {
+  grid-row-end: time-1430;
+}
+.schedule .row-s-time-1435 {
+  grid-row-start: time-1435;
+}
+.schedule .row-e-time-1435 {
+  grid-row-end: time-1435;
+}
+.schedule .row-s-time-1440 {
+  grid-row-start: time-1440;
+}
+.schedule .row-e-time-1440 {
+  grid-row-end: time-1440;
+}
+.schedule .row-s-time-1445 {
+  grid-row-start: time-1445;
+}
+.schedule .row-e-time-1445 {
+  grid-row-end: time-1445;
+}
+.schedule .row-s-time-1450 {
+  grid-row-start: time-1450;
+}
+.schedule .row-e-time-1450 {
+  grid-row-end: time-1450;
+}
+.schedule .row-s-time-1455 {
+  grid-row-start: time-1455;
+}
+.schedule .row-e-time-1455 {
+  grid-row-end: time-1455;
+}
+.schedule .row-s-time-1500 {
+  grid-row-start: time-1500;
+}
+.schedule .row-e-time-1500 {
+  grid-row-end: time-1500;
+}
+.schedule .row-s-time-1505 {
+  grid-row-start: time-1505;
+}
+.schedule .row-e-time-1505 {
+  grid-row-end: time-1505;
+}
+.schedule .row-s-time-1510 {
+  grid-row-start: time-1510;
+}
+.schedule .row-e-time-1510 {
+  grid-row-end: time-1510;
+}
+.schedule .row-s-time-1515 {
+  grid-row-start: time-1515;
+}
+.schedule .row-e-time-1515 {
+  grid-row-end: time-1515;
+}
+.schedule .row-s-time-1520 {
+  grid-row-start: time-1520;
+}
+.schedule .row-e-time-1520 {
+  grid-row-end: time-1520;
+}
+.schedule .row-s-time-1525 {
+  grid-row-start: time-1525;
+}
+.schedule .row-e-time-1525 {
+  grid-row-end: time-1525;
+}
+.schedule .row-s-time-1530 {
+  grid-row-start: time-1530;
+}
+.schedule .row-e-time-1530 {
+  grid-row-end: time-1530;
+}
+.schedule .row-s-time-1535 {
+  grid-row-start: time-1535;
+}
+.schedule .row-e-time-1535 {
+  grid-row-end: time-1535;
+}
+.schedule .row-s-time-1540 {
+  grid-row-start: time-1540;
+}
+.schedule .row-e-time-1540 {
+  grid-row-end: time-1540;
+}
+.schedule .row-s-time-1545 {
+  grid-row-start: time-1545;
+}
+.schedule .row-e-time-1545 {
+  grid-row-end: time-1545;
+}
+.schedule .row-s-time-1550 {
+  grid-row-start: time-1550;
+}
+.schedule .row-e-time-1550 {
+  grid-row-end: time-1550;
+}
+.schedule .row-s-time-1555 {
+  grid-row-start: time-1555;
+}
+.schedule .row-e-time-1555 {
+  grid-row-end: time-1555;
+}
+.schedule .row-s-time-1600 {
+  grid-row-start: time-1600;
+}
+.schedule .row-e-time-1600 {
+  grid-row-end: time-1600;
+}
+.schedule .row-s-time-1605 {
+  grid-row-start: time-1605;
+}
+.schedule .row-e-time-1605 {
+  grid-row-end: time-1605;
+}
+.schedule .row-s-time-1610 {
+  grid-row-start: time-1610;
+}
+.schedule .row-e-time-1610 {
+  grid-row-end: time-1610;
+}
+.schedule .row-s-time-1615 {
+  grid-row-start: time-1615;
+}
+.schedule .row-e-time-1615 {
+  grid-row-end: time-1615;
+}
+.schedule .row-s-time-1620 {
+  grid-row-start: time-1620;
+}
+.schedule .row-e-time-1620 {
+  grid-row-end: time-1620;
+}
+.schedule .row-s-time-1625 {
+  grid-row-start: time-1625;
+}
+.schedule .row-e-time-1625 {
+  grid-row-end: time-1625;
+}
+.schedule .row-s-time-1630 {
+  grid-row-start: time-1630;
+}
+.schedule .row-e-time-1630 {
+  grid-row-end: time-1630;
+}
+.schedule .row-s-time-1635 {
+  grid-row-start: time-1635;
+}
+.schedule .row-e-time-1635 {
+  grid-row-end: time-1635;
+}
+.schedule .row-s-time-1640 {
+  grid-row-start: time-1640;
+}
+.schedule .row-e-time-1640 {
+  grid-row-end: time-1640;
+}
+.schedule .row-s-time-1645 {
+  grid-row-start: time-1645;
+}
+.schedule .row-e-time-1645 {
+  grid-row-end: time-1645;
+}
+.schedule .row-s-time-1650 {
+  grid-row-start: time-1650;
+}
+.schedule .row-e-time-1650 {
+  grid-row-end: time-1650;
+}
+.schedule .row-s-time-1655 {
+  grid-row-start: time-1655;
+}
+.schedule .row-e-time-1655 {
+  grid-row-end: time-1655;
+}
+.schedule .row-s-time-1700 {
+  grid-row-start: time-1700;
+}
+.schedule .row-e-time-1700 {
+  grid-row-end: time-1700;
+}
+.schedule .col-s-week {
+  grid-column-start: mo;
+}
+.schedule .col-s-times {
+  grid-column-start: times;
+}
+.schedule .col-e-times {
+  grid-column-end: times;
+}
+.schedule .col-s-mo {
+  grid-column-start: mo;
+}
+.schedule .col-e-mo {
+  grid-column-end: mo;
+}
+.schedule .col-s-tu {
+  grid-column-start: tu;
+}
+.schedule .col-e-tu {
+  grid-column-end: tu;
+}
+.schedule .col-s-we {
+  grid-column-start: we;
+}
+.schedule .col-e-we {
+  grid-column-end: we;
+}
+.schedule .col-s-th {
+  grid-column-start: th;
+}
+.schedule .col-e-th {
+  grid-column-end: th;
+}
+.schedule .col-s-fr {
+  grid-column-start: fr;
+}
+.schedule .col-e-fr {
+  grid-column-end: fr;
+}
+.schedule .col-e-week {
+  grid-column-end: end-week;
+}
+
+/***********
+ * Modules
+ ***********/
+.module {
+  border-radius: 15px;
+  font-weight: 500;
+  padding: 0.5em 0.75em;
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  place-content: start space-between;
+  column-gap: 0.5em;
+  overflow-wrap: anywhere;
+  margin-right: 0.5em;
+  margin-bottom: 0.5em;
+}
+.module a {
+  text-decoration: underline dotted;
+  color: inherit;
+}
+.module a:hover {
+  text-decoration: underline;
+}
+.module__passed {
+  background-color: #e9eef6;
+  color: rgba(0, 170, 81, 0.4);
+  box-shadow: 4px 4px 0.2em #d7e0ef;
+}
+.module__passed a:hover {
+  color: rgba(0, 196, 93, 0.4);
+}
+.module__actual {
+  background-color: #00a651;
+  color: #d7e0ed;
+  box-shadow: 4px 4px 0.2em #008d45;
+}
+.module__actual a:hover {
+  color: #e9eef5;
+}
+.module__future {
+  background-color: #d7e0ed;
+  color: #00a651;
+  box-shadow: 4px 4px 0.2em #c5d2e5;
+}
+.module__future a:hover {
+  color: #00c05d;
+}
+.module__title {
+  grid-column: 1/2;
+  font-weight: 900;
+  align-self: start;
+  font-size: 1.1em;
+}
+.module__book {
+  font-size: 2em;
+  grid-row: 2/3;
+  grid-column: -2/-1;
+  text-align: end;
+  align-self: end;
+}
+.module__room, .module__slots {
+  grid-column: 1/2;
+  min-width: 66px;
+  align-self: end;
+}
+.module__room a, .module__slots a {
+  text-decoration: none;
+}
+.module__slots {
+  grid-column: -2/-1;
+  font-size: 0.9em;
+  align-self: start;
 }
 
 /*# sourceMappingURL=global.css.map */
