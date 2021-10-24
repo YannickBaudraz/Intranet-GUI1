@@ -4,7 +4,7 @@ body {
   background-color: $back-color;
   font-family: "Roboto", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
 
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 1024px) {
     font-size: .75rem;
   }
 }

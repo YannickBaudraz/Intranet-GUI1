@@ -4,7 +4,7 @@ body {
   background-color: white;
   font-family: "Roboto", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1024px) {
   body {
     font-size: 0.75rem;
   }
@@ -17,23 +17,15 @@ body {
   border-bottom: 3px solid #00a651;
   width: 100%;
   height: 40px;
-  border-bottom-right-radius: 3px;
-  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 15px;
+  border-bottom-left-radius: 15px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding-right: 10px;
+  padding-left: 10px;
   background-color: inherit;
   z-index: 1000;
-}
-#menu .menuBurger {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-  width: 40px;
-}
-#menu .menuBurger .fas {
-  color: #00A651;
 }
 #menu .menuWeek {
   display: flex;
@@ -57,7 +49,6 @@ body {
   width: 40px;
   border-radius: 7px;
   justify-content: center;
-  margin-right: 10px;
   align-items: center;
 }
 #menu .week-dayButton .fas {
@@ -68,6 +59,124 @@ body {
 #menu + .after-menu {
   width: 100%;
   margin-top: 40px;
+}
+
+/* Source: Based from https://codepen.io/dannievinther/pen/NvZjvz */
+#menu-container {
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  pointer-events: none;
+  z-index: 1000;
+}
+#menu-container .bg {
+  position: absolute;
+  top: 40px;
+  left: 0;
+  width: 100%;
+  height: calc(100% - 40px);
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.3s;
+  background: black;
+}
+#menu-container .burger {
+  position: absolute;
+  left: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 0;
+  background: transparent;
+  border-radius: 0;
+  height: 40px;
+  width: 30px;
+  cursor: pointer;
+  pointer-events: auto;
+  touch-action: manipulation;
+}
+#menu-container .icon-bar {
+  display: block;
+  width: 100%;
+  height: 3px;
+  background: #00a651;
+  transition: 0.3s;
+}
+#menu-container .icon-bar + .icon-bar {
+  margin-top: 5px;
+}
+#menu-container:focus-within .bg {
+  visibility: visible;
+  opacity: 0.6;
+}
+#menu-container:focus-within .burger {
+  pointer-events: none;
+  z-index: 1001;
+}
+#menu-container:focus-within .icon-bar:nth-of-type(1) {
+  transform: translate3d(0, 8px, 0) rotate(45deg);
+}
+#menu-container:focus-within .icon-bar:nth-of-type(2) {
+  opacity: 0;
+}
+#menu-container:focus-within .icon-bar:nth-of-type(3) {
+  transform: translate3d(0, -8px, 0) rotate(-45deg);
+}
+#menu-container:focus-within #nav-content {
+  transform: none;
+}
+#menu-container * {
+  visibility: visible;
+}
+
+#nav-content {
+  margin-top: 40px;
+  padding: 20px;
+  position: absolute;
+  width: auto;
+  max-width: 33.3333333333%;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background: white;
+  pointer-events: auto;
+  transform: translateX(-100%);
+  transition: transform 0.3s;
+  will-change: transform;
+  contain: paint;
+}
+#nav-content ul {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+}
+#nav-content li a {
+  padding: 10px 5px;
+  display: block;
+  text-transform: uppercase;
+  transition: color 0.1s;
+}
+#nav-content li a:hover {
+  color: #a57;
+}
+#nav-content:focus-within #nav-content {
+  transform: none;
+}
+#nav-content a, #nav-content a:visited, #nav-content a:focus, #nav-content a:active, #nav-content a:link {
+  text-decoration: none;
+  outline: 0;
+}
+#nav-content a {
+  color: currentColor;
+  transition: 0.2s ease-in-out;
+}
+#nav-content h1, #nav-content h2, #nav-content h3, #nav-content h4 {
+  margin: 0;
+}
+#nav-content ul {
+  padding: 0;
+  list-style: none;
 }
 
 /*****************
@@ -88,8 +197,10 @@ body {
 .schedule .time-slot {
   grid-column: times;
   transform: translateY(-0.75em);
+  z-index: 0;
   margin-right: 0.5em;
   font-weight: 400;
+  color: rgba(24, 76, 109, 0.5);
 }
 .schedule .info {
   padding: 0.5em;

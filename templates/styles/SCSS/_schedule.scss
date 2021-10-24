@@ -17,8 +17,10 @@
   .time-slot {
     grid-column: times;
     transform: translateY(-.75em);
+    z-index: 0;
     margin-right: .5em;
     font-weight: 400;
+    color: transparentize($text-color, .5);
   }
 
   .info {
