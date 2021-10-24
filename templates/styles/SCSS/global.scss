@@ -1,18 +1,7 @@
 @import "variables";
 @import "functions";
 @import "mixins";
-
-body {
-  font-size: 1rem;
-  color: $text-color;
-  background-color: $back-color;
-  font-family: "Roboto", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
-
-  @media screen and (max-width: 600px) {
-    font-size: .75rem;
-  }
-}
-
+@import "layout";
 @import "menu";
 @import "schedule";
 @import "module";

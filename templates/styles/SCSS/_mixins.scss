@@ -25,3 +25,15 @@
   }
   .col-e-week { grid-column-end: end-week }
 }
+
+@mixin createModuleType($typeClass, $module-background-color, $module-text-color) {
+  #{$typeClass} {
+    background-color: $module-background-color;
+    color: $module-text-color;
+    box-shadow: 4px 4px .2em darken($module-background-color, 5);
+
+    a:hover {
+      color: lighten($module-text-color, 5);
+    }
+  }
+}
