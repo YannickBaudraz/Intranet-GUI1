@@ -6,10 +6,18 @@ ob_start();
         <div></div>
         <div class="menuWeek">
             <i class="fas fa-arrow-circle-left"></i>
-            <div><span>6 septembre 2021</span></div>
+            <?php if (count($menuDates) > 1): ?>
+                <div><span>Du <?= $menuDates[0] ?> au <?= $menuDates[1] ?> 2021</span></div>
+            <?php else: ?>
+                <div><span><?= $menuDates[0] ?> 2021</span></div>
+            <?php endif; ?>
             <i class="fas fa-arrow-circle-right"></i>
         </div>
-        <div class="week-dayButton"><i class="fas fa-calendar-week"></i></div>
+        <a class="week-dayButton"
+           href="?calendar-mode=<?= $calendarMode === 'day' ? 'week' : 'day' ?>"
+        >
+            <i class="fas fa-calendar-week"></i>
+        </a>
     </div>
     <div id="menu-container">
         <div class="bg"></div>

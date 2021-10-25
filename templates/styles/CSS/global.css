@@ -21,11 +21,14 @@ body {
   border-bottom-left-radius: 15px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   padding-right: 10px;
   padding-left: 10px;
   background-color: inherit;
   z-index: 1000;
+}
+#menu div:first-child {
+  width: 40px;
 }
 #menu .menuWeek {
   display: flex;
@@ -56,7 +59,8 @@ body {
   text-align: center;
   color: white;
 }
-#menu + .after-menu {
+
+.after-menu {
   width: 100%;
   margin-top: 40px;
 }
@@ -71,7 +75,7 @@ body {
 }
 #menu-container .bg {
   position: absolute;
-  top: 40px;
+  top: 0;
   left: 0;
   width: 100%;
   height: calc(100% - 40px);
@@ -82,6 +86,7 @@ body {
 }
 #menu-container .burger {
   position: absolute;
+  top: -40px;
   left: 10px;
   display: flex;
   flex-direction: column;
@@ -130,7 +135,6 @@ body {
 }
 
 #nav-content {
-  margin-top: 40px;
   padding: 20px;
   position: absolute;
   width: auto;
@@ -188,19 +192,19 @@ body {
   grid-template-rows: [tracks] auto [info] auto [time-0800] auto [time-0805] auto [time-0810] auto [time-0815] auto [time-0820] auto [time-0825] auto [time-0830] auto [time-0835] auto [time-0840] auto [time-0845] auto [time-0850] auto [time-0855] auto [time-0900] auto [time-0905] auto [time-0910] auto [time-0915] auto [time-0920] auto [time-0925] auto [time-0930] auto [time-0935] auto [time-0940] auto [time-0945] auto [time-0950] auto [time-0955] auto [time-1000] auto [time-1005] auto [time-1010] auto [time-1015] auto [time-1020] auto [time-1025] auto [time-1030] auto [time-1035] auto [time-1040] auto [time-1045] auto [time-1050] auto [time-1055] auto [time-1100] auto [time-1105] auto [time-1110] auto [time-1115] auto [time-1120] auto [time-1125] auto [time-1130] auto [time-1135] auto [time-1140] auto [time-1145] auto [time-1150] auto [time-1155] auto [time-1200] auto [time-1205] auto [time-1210] auto [time-1215] auto [time-1220] auto [time-1225] auto [time-1230] auto [time-1235] auto [time-1240] auto [time-1245] auto [time-1250] auto [time-1255] auto [time-1300] auto [time-1305] auto [time-1310] auto [time-1315] auto [time-1320] auto [time-1325] auto [time-1330] auto [time-1335] auto [time-1340] auto [time-1345] auto [time-1350] auto [time-1355] auto [time-1400] auto [time-1405] auto [time-1410] auto [time-1415] auto [time-1420] auto [time-1425] auto [time-1430] auto [time-1435] auto [time-1440] auto [time-1445] auto [time-1450] auto [time-1455] auto [time-1500] auto [time-1505] auto [time-1510] auto [time-1515] auto [time-1520] auto [time-1525] auto [time-1530] auto [time-1535] auto [time-1540] auto [time-1545] auto [time-1550] auto [time-1555] auto [time-1600] auto [time-1605] auto [time-1610] auto [time-1615] auto [time-1620] auto [time-1625] auto [time-1630] auto [time-1635] auto [time-1640] auto [time-1645] auto [time-1650] auto [time-1655] auto [time-1700] auto;
   grid-template-columns: [times] auto [mo] 1fr [tu] 1fr [we] 1fr [th] 1fr [fr] 1fr [end-week];
 }
+.schedule .track-slot, .schedule .time-slot {
+  font-weight: 600;
+}
 .schedule .track-slot {
   display: block;
   padding: 10px 5px 5px;
   text-align: center;
-  font-weight: 500;
 }
 .schedule .time-slot {
   grid-column: times;
   transform: translateY(-0.75em);
   z-index: 0;
   margin-right: 0.5em;
-  font-weight: 400;
-  color: rgba(24, 76, 109, 0.5);
 }
 .schedule .info {
   padding: 0.5em;
@@ -924,6 +928,9 @@ body {
 .schedule .col-e-week {
   grid-column-end: end-week;
 }
+.schedule .col-all-week {
+  grid-column: mo/end-week;
+}
 
 /***********
  * Modules
@@ -936,7 +943,7 @@ body {
   grid-template-columns: repeat(2, auto);
   place-content: start space-between;
   column-gap: 0.5em;
-  overflow-wrap: anywhere;
+  overflow-wrap: break-word;
   margin-right: 0.5em;
   margin-bottom: 0.5em;
 }
@@ -945,7 +952,7 @@ body {
   color: inherit;
 }
 .module a:hover {
-  text-decoration: underline;
+  text-decoration: overline dotted;
 }
 .module__passed {
   background-color: #e9eef6;
@@ -984,17 +991,37 @@ body {
   text-align: end;
   align-self: end;
 }
-.module__room, .module__slots {
+.module__room {
   grid-column: 1/2;
-  min-width: 66px;
   align-self: end;
 }
-.module__room a, .module__slots a {
+.module__room * {
+  white-space: nowrap;
+}
+.module__room a {
   text-decoration: none;
 }
 .module__slots {
   grid-column: -2/-1;
   font-size: 0.9em;
+  align-self: start;
+  white-space: nowrap;
+}
+.module__slots a {
+  text-decoration: none;
+}
+
+.day-mode .module {
+  align-content: start;
+}
+.day-mode .module__teacher {
+  grid-row: 2;
+}
+.day-mode .module__slots {
+  grid-row: 1/1;
+}
+.day-mode .module__book {
+  grid-row: 2/4;
   align-self: start;
 }
 

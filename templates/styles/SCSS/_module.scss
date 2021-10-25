@@ -9,7 +9,7 @@
   grid-template-columns: repeat(2, auto);
   place-content: start space-between;
   column-gap: .5em;
-  overflow-wrap: anywhere;
+  overflow-wrap: break-word;
   margin-right: .5em;
   margin-bottom: .5em;
 
@@ -18,7 +18,7 @@
     color: inherit;
 
     &:hover {
-      text-decoration: underline;
+      text-decoration: overline dotted;
     }
   }
 
@@ -43,8 +43,11 @@
 
   &__room {
     grid-column: 1 / 2;
-    min-width: 66px;
     align-self: end;
+
+    * {
+      white-space: nowrap;
+    }
 
     a {
       text-decoration: none;
@@ -52,9 +55,32 @@
   }
 
   &__slots {
-    @extend .module__room;
     grid-column: -2 / -1;
     font-size: .9em;
     align-self: start;
+    white-space: nowrap;
+
+    a {
+      text-decoration: none;
+    }
+  }
+}
+
+.day-mode {
+  .module {
+    align-content: start;
+
+    &__teacher {
+      grid-row: 2;
+    }
+
+    &__slots {
+      grid-row: 1 / 1;
+    }
+
+    &__book {
+      grid-row: 2 / 4;
+      align-self: start;
+    }
   }
 }

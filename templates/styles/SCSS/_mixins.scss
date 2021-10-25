@@ -24,6 +24,7 @@
     }
   }
   .col-e-week { grid-column-end: end-week }
+  .col-all-week { grid-column: mo / end-week }
 }
 
 @mixin createModuleType($typeClass, $module-background-color, $module-text-color) {

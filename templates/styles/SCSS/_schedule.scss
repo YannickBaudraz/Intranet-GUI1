@@ -7,11 +7,14 @@
   grid-template-rows: getScheduleTemplateRows();
   grid-template-columns: getScheduleTemplateColumns();
 
+  .track-slot, .time-slot {
+    font-weight: 600;
+  }
+
   .track-slot {
     display: block;
     padding: 10px 5px 5px;
     text-align: center;
-    font-weight: 500;
   }
 
   .time-slot {
@@ -19,8 +22,6 @@
     transform: translateY(-.75em);
     z-index: 0;
     margin-right: .5em;
-    font-weight: 400;
-    color: transparentize($text-color, .5);
   }
 
   .info {

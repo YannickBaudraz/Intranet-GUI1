@@ -9,11 +9,15 @@
   border-bottom-left-radius: 15px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   padding-right: 10px;
   padding-left: 10px;
   background-color: inherit;
   z-index: 1000;
+
+  div:first-child {
+    width: 40px;
+  }
 
   .menuWeek {
     display: flex;
@@ -48,11 +52,11 @@
       color: white;
     }
   }
+}
 
-  + .after-menu {
-    width: 100%;
-    margin-top: 40px;
-  }
+.after-menu {
+  width: 100%;
+  margin-top: 40px;
 }
 
 /* Source: Based from https://codepen.io/dannievinther/pen/NvZjvz */
@@ -65,7 +69,7 @@
 
   .bg {
     position: absolute;
-    top: 40px;
+    top: 0;
     left: 0;
     width: 100%;
     height: calc(100% - 40px);
@@ -77,6 +81,7 @@
 
   .burger {
     position: absolute;
+    top: -40px;
     left: 10px;
     display: flex;
     flex-direction: column;
@@ -141,7 +146,6 @@
 }
 
 #nav-content {
-  margin-top: 40px;
   padding: 20px;
   position: absolute;
   width: auto;
