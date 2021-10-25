@@ -15,4 +15,8 @@ class mainController
             require_once "templates/weekCalendar.php";
         }
     }
+
+    public function showAbsencesCards(){
+        require_once "templates/absencesCards.php";
+    }
 }

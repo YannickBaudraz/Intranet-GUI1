@@ -37,6 +37,13 @@
     }
   }
 
+  .return-arrow{
+    .fas {
+      font-size: 1.7em;
+      color: $blue;
+    }
+  }
+
   .week-dayButton {
     display: flex;
     background-color: $blue;
@@ -178,6 +185,8 @@
         color: $magenta;
       }
     }
+
+
   }
 
   &:focus-within #nav-content {
