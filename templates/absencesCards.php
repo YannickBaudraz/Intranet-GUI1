@@ -4,6 +4,10 @@ ob_start();
 
 ?>
 
+<div id="absenceCards">
+    <div></div>
+</div>
+
 
 <?php
 $headerPath = "templates/components/menuAbsences.php";

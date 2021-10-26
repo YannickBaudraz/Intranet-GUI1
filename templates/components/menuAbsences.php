@@ -4,9 +4,9 @@ ob_start();
 ?>
     <div id="menu">
         <div></div>
-        <div class="menu-title">
+        <h5 class="menu-title">
             Gestion des abscences
-        </div>
+        </h5>
         <div class="return-arrow">
             <i class="fas fa-arrow-circle-left"></i>
         </div>
@@ -27,7 +27,21 @@ ob_start();
                 <li><a href="#">Liste</a></li>
                 <hr>
                 <li><h6>Outils abscences:</h6></li>
-                <li class="text-warning"><a href="#"><div>Valider abscences</a></li>
+                <li><div class="btn unjustified">Absence injustifiée</div></li>
+                <li><div class="btn excluded">Exclusion</div></li>
+                <li><div class="btn justified">Absence justifiée</div></li>
+                <li><div class="btn expired">Ab. j. hors délai</div></li>
+                <li><div class="btn granted">Congé accordé</div></li>
+                <li><div class="btn late">Arrivée tardive</div></li>
+                <li><div class="btn appointment">Rendez-vous / externe</div></li>
+                <li><div class="btn restraint">Appui/Retenue</div></li>
+                <li><div class="btn notDone">Devoir non fait</div></li>
+                <li><div class="btn erase">Effacer</div></li>
+                <br>
+                <li class="text-warning"><a class="validate" href="#"><div class="btn validate">Valider présences</div></a></li>
+                <br>
+                <br>
+                <br>
             </ul>
         </div>
     </div>

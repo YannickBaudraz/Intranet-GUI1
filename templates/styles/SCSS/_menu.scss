@@ -37,10 +37,22 @@
     }
   }
 
-  .return-arrow{
+  .menu-title {
+    margin-top: unset;
+    margin-bottom: unset;
+    line-height: unset;
+  }
+
+  .return-arrow {
     .fas {
-      font-size: 1.7em;
+      font-size: 2.4em;
       color: $blue;
+    }
+  }
+
+  div {
+    &.present {
+      background-color: #009933;
     }
   }
 
@@ -156,7 +168,7 @@
   padding: 20px;
   position: absolute;
   width: auto;
-  max-width: calc(100% / 3);
+  max-width: 75%;
   top: 0;
   left: 0;
   height: 100%;
@@ -166,6 +178,7 @@
   transition: transform .3s;
   will-change: transform;
   contain: paint;
+
 
   ul {
     height: 100%;
@@ -184,9 +197,98 @@
       &:hover {
         color: $magenta;
       }
+
+      &.validate{
+        padding: unset;
+        display: unset;
+        transition: unset;
+      }
     }
 
+    div {
+      min-height: 40px;
+      height: auto;
+      width: 95%;
+      border: 1px black solid;
+      margin-bottom: 5px;
 
+
+    }
+  }
+
+  div {
+    &.validate{
+      background-color: $presence-validate;
+      color: white;
+      display: block;
+    }
+
+    &.present {
+      background-color: $presence-present;
+      color: white;
+    }
+
+    &.erase {
+      background-color: $presence-erase;
+      color: white;
+    }
+
+    &.unjustified {
+      background-color: $presence-unjustified;
+      color: white;
+    }
+
+    &.excluded {
+      background-image: repeating-linear-gradient(
+                      45deg,
+                      $presence-excluded1 1em,
+                      $presence-excluded1 1em,
+                      $presence-excluded2 2em,
+                      $presence-excluded2 2em
+      );
+      color: white;
+    }
+
+    &.expired {
+      background-image: repeating-linear-gradient(
+                      315deg,
+                      $presence-expired1 1em,
+                      $presence-expired1 1em,
+                      $presence-expired2 2em,
+                      $presence-expired2 2em
+      );
+      color: white;
+    }
+
+    &.justified {
+      background-color: $presence-justified;
+      color: white;
+    }
+
+    &.granted {
+      background-color: $presence-granted;
+      color: white;
+    }
+
+    &.late {
+      background-color: $presence-late;
+      color: black;
+    }
+
+    &.appointment {
+      background-color: $presence-appointment;
+      color: white;
+    }
+
+    &.restraint {
+      background-color: $presence-restraint;
+      color: white;
+    }
+
+    &.notDone {
+      background-color: $presence-notDone;
+      color: white;
+    }
   }
 
   &:focus-within #nav-content {
