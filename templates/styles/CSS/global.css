@@ -181,6 +181,9 @@ body {
   display: unset;
   transition: unset;
 }
+#nav-content li a.late {
+  color: black !important;
+}
 #nav-content li div {
   min-height: 40px;
   height: auto;
@@ -192,50 +195,6 @@ body {
   background-color: #29ae1f;
   color: white;
   display: block;
-}
-#nav-content div.present {
-  background-color: #4cf556;
-  color: white;
-}
-#nav-content div.erase {
-  background-color: #696969;
-  color: white;
-}
-#nav-content div.unjustified {
-  background-color: #f80000;
-  color: white;
-}
-#nav-content div.excluded {
-  background-image: repeating-linear-gradient(45deg, #f50e0e 1em, #f50e0e 1em, #ff9b9b 2em, #ff9b9b 2em);
-  color: white;
-}
-#nav-content div.expired {
-  background-image: repeating-linear-gradient(315deg, #551988 1em, #551988 1em, #784f9b 2em, #784f9b 2em);
-  color: white;
-}
-#nav-content div.justified {
-  background-color: #5a1ab5;
-  color: white;
-}
-#nav-content div.granted {
-  background-color: #fa21ff;
-  color: white;
-}
-#nav-content div.late {
-  background-color: #e3ca07;
-  color: black;
-}
-#nav-content div.appointment {
-  background-color: #104da7;
-  color: white;
-}
-#nav-content div.restraint {
-  background-color: #1a9eca;
-  color: white;
-}
-#nav-content div.notDone {
-  background-color: #6b3f23;
-  color: white;
 }
 #nav-content:focus-within #nav-content {
   transform: none;
@@ -254,6 +213,11 @@ body {
 #nav-content ul {
   padding: 0;
   list-style: none;
+}
+#nav-content .spacer {
+  display: block;
+  width: 100%;
+  height: 5px;
 }
 
 /*****************
@@ -1096,6 +1060,85 @@ body {
 .day-mode .module__book {
   grid-row: 2/4;
   align-self: start;
+}
+
+#absenceCards {
+  padding-top: 10px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-content: space-around;
+}
+#absenceCards .studentCard {
+  width: 45%;
+  max-width: 180px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  margin-bottom: 5px;
+  color: white;
+}
+#absenceCards .studentCard .picture {
+  background-size: 100% 100%;
+  border-radius: 5px;
+  width: 95%;
+  height: 95%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  text-align: center;
+}
+
+.present {
+  background-color: #4cf556;
+  color: white !important;
+}
+
+.unjustified {
+  background-color: #f80000;
+  color: white !important;
+}
+
+.excluded {
+  background-image: repeating-linear-gradient(45deg, #f50e0e 1em, #f50e0e 1em, #ff9b9b 2em, #ff9b9b 2em);
+  color: white !important;
+}
+
+.expired {
+  background-image: repeating-linear-gradient(315deg, #551988 1em, #551988 1em, #784f9b 2em, #784f9b 2em);
+  color: white !important;
+}
+
+.justified {
+  background-color: #5a1ab5;
+  color: white !important;
+}
+
+.granted {
+  background-color: #fa21ff;
+  color: white !important;
+}
+
+.late {
+  background-color: #e3ca07;
+  color: white !important;
+}
+
+.appointment {
+  background-color: #104da7;
+  color: white !important;
+}
+
+.restraint {
+  background-color: #1a9eca;
+  color: white !important;
+}
+
+.notDone {
+  background-color: #6b3f23;
+  color: white !important;
 }
 
 /*# sourceMappingURL=global.css.map */

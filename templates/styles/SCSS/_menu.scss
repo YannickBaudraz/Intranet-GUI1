@@ -180,11 +180,13 @@
   contain: paint;
 
 
+
   ul {
     height: 100%;
     display: flex;
     flex-direction: column;
     list-style: none;
+
   }
 
   li {
@@ -198,10 +200,14 @@
         color: $magenta;
       }
 
-      &.validate{
+      &.validate {
         padding: unset;
         display: unset;
         transition: unset;
+      }
+
+      &.late{
+        color: black !important;
       }
     }
 
@@ -217,77 +223,10 @@
   }
 
   div {
-    &.validate{
+    &.validate {
       background-color: $presence-validate;
       color: white;
       display: block;
-    }
-
-    &.present {
-      background-color: $presence-present;
-      color: white;
-    }
-
-    &.erase {
-      background-color: $presence-erase;
-      color: white;
-    }
-
-    &.unjustified {
-      background-color: $presence-unjustified;
-      color: white;
-    }
-
-    &.excluded {
-      background-image: repeating-linear-gradient(
-                      45deg,
-                      $presence-excluded1 1em,
-                      $presence-excluded1 1em,
-                      $presence-excluded2 2em,
-                      $presence-excluded2 2em
-      );
-      color: white;
-    }
-
-    &.expired {
-      background-image: repeating-linear-gradient(
-                      315deg,
-                      $presence-expired1 1em,
-                      $presence-expired1 1em,
-                      $presence-expired2 2em,
-                      $presence-expired2 2em
-      );
-      color: white;
-    }
-
-    &.justified {
-      background-color: $presence-justified;
-      color: white;
-    }
-
-    &.granted {
-      background-color: $presence-granted;
-      color: white;
-    }
-
-    &.late {
-      background-color: $presence-late;
-      color: black;
-    }
-
-    &.appointment {
-      background-color: $presence-appointment;
-      color: white;
-    }
-
-    &.restraint {
-      background-color: $presence-restraint;
-      color: white;
-    }
-
-    &.notDone {
-      background-color: $presence-notDone;
-      color: white;
     }
   }
 
@@ -312,6 +251,11 @@
   ul {
     padding: 0;
     list-style: none;
+  }
+  .spacer{
+    display: block;
+    width: 100%;
+    height: 5px;
   }
 }
 
