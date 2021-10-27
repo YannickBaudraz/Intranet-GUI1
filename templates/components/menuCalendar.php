@@ -28,7 +28,7 @@ ob_start();
         </div>
         <div id="nav-content" tabindex="0">
             <ul>
-                <li><a href="#">Accueil</a></li>
+                <li><a href="?">Accueil</a></li>
                 <li><a href="#">Agenda</a></li>
                 <li><a href="#">Classes</a></li>
                 <li><a href="#">Cours</a></li>
