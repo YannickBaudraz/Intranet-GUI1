@@ -1,0 +1,90 @@
+#absenceCards{
+  padding-top: 10px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-content: space-around;
+  .studentCard{
+    width: 45%;
+    max-width: 180px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px ;
+    margin-bottom: 5px;
+    color: white;
+    .picture{
+      background-size: 100% 100%;
+      border-radius: 5px;
+      width: 95%;
+      height: 95%;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      text-align: center;
+    }
+  }
+}
+
+.present {
+  background-color: $presence-present;
+  color: white !important;
+}
+
+.unjustified {
+  background-color: $presence-unjustified;
+  color: white !important;
+}
+
+.excluded {
+  background-image: repeating-linear-gradient(
+                  45deg,
+                  $presence-excluded1 1em,
+                  $presence-excluded1 1em,
+                  $presence-excluded2 2em,
+                  $presence-excluded2 2em
+  );
+  color: white !important;
+}
+
+.expired {
+  background-image: repeating-linear-gradient(
+                  315deg,
+                  $presence-expired1 1em,
+                  $presence-expired1 1em,
+                  $presence-expired2 2em,
+                  $presence-expired2 2em
+  );
+  color: white !important;
+}
+
+.justified {
+  background-color: $presence-justified;
+  color: white !important;
+}
+
+.granted {
+  background-color: $presence-granted;
+  color: white !important;
+}
+
+.late {
+  background-color: $presence-late;
+  color: white !important;
+}
+
+.appointment {
+  background-color: $presence-appointment;
+  color: white !important;
+}
+
+.restraint {
+  background-color: $presence-restraint;
+  color: white !important;
+}
+
+.notDone {
+  background-color: $presence-notDone;
+  color: white !important;
+}

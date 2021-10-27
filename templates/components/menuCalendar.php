@@ -14,7 +14,7 @@ ob_start();
             <i class="fas fa-arrow-circle-right"></i>
         </div>
         <a class="week-dayButton"
-           href="?calendar-mode=<?= $calendarMode === 'day' ? 'week' : 'day' ?>"
+           href="?action=showCalender&calendar-mode=<?= $calendarMode === 'day' ? 'week' : 'day' ?>"
         >
             <i class="fas fa-calendar-week"></i>
         </a>
