@@ -1,0 +1,16 @@
+#absenceTable{
+  overflow: paged-x;
+  & > tbody > tr > td:first-child{
+    width: 71px;
+  }
+  td{
+    border: 1px black solid;
+    width: 5px;
+  }
+}
+
+#absenceTableContainer{
+  max-width: 100%!important;
+  overflow: auto;
+}
+

@@ -1,20 +1,22 @@
-#absenceCards{
+#absenceCards {
   padding-top: 10px;
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
   align-content: space-around;
-  .studentCard{
+
+  .studentCard {
     width: 45%;
     max-width: 180px;
     height: 200px;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 5px ;
+    border-radius: 5px;
     margin-bottom: 5px;
     color: white;
-    .picture{
+
+    .picture {
       background-size: 100% 100%;
       border-radius: 5px;
       width: 95%;
@@ -26,6 +28,7 @@
     }
   }
 }
+
 
 .present {
   background-color: $presence-present;
@@ -86,5 +89,10 @@
 
 .notDone {
   background-color: $presence-notDone;
+  color: white !important;
+}
+
+.uncompleted {
+  background-color: $presence-uncompleted;
   color: white !important;
 }

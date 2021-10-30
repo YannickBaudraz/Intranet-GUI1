@@ -16,6 +16,9 @@ if (isset($_GET['action'])) {
         case 'showAbsencesCards':
             $mainController->showAbsencesCards();
             break;
+        case 'showAbsencesTable':
+            $mainController->showAbsencesTable();
+            break;
         default:
             $mainController->showHome();
     }
