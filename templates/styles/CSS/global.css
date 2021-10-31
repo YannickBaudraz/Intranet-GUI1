@@ -3,7 +3,6 @@ body {
   color: #184C6D;
   background-color: white;
   font-family: "Roboto", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
-  max-width: 100%;
 }
 @media screen and (max-width: 1024px) {
   body {
@@ -1076,7 +1075,7 @@ body {
 }
 
 #absenceTableContainer {
-  max-width: 100% !important;
+  max-width: 100%;
   overflow: auto;
 }
 

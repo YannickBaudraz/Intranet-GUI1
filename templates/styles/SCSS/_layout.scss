@@ -3,7 +3,6 @@ body {
   color: $text-color;
   background-color: $back-color;
   font-family: "Roboto", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
-  max-width: 100%;
 
   @media screen and (max-width: 1024px) {
     font-size: .75rem;

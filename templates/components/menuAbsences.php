@@ -28,6 +28,7 @@ ob_start();
                 <li><a href="#">Liste</a></li>
                 <hr>
                 <li><h6>Outils abscences:</h6></li>
+                <li><div class="btn toolBtn present">Présent</div></li>
                 <li><div class="btn toolBtn unjustified">Absence injustifiée</div></li>
                 <li><div class="btn toolBtn excluded">Exclusion</div></li>
                 <li><div class="btn toolBtn justified">Absence justifiée</div></li>

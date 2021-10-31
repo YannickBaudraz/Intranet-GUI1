@@ -24,7 +24,7 @@ require_once $headerPath;
     <!-- JavaScript Bundle with Popper -->
 
     <script src="https://kit.fontawesome.com/3f7b822457.js" crossorigin="anonymous"></script>
-    <script src="templates/scripts/absenceCards.js"></script>
+    <script src="templates/scripts/absences.js"></script>
     <title>Intranet GUI-1</title>
 </head>
 <body>

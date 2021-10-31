@@ -4,6 +4,7 @@ ob_start();
 
 $eleves = ["Abrams Doe", "Batiste Doe", "Carl Joe", "Daniel Doe", "Etienne Doe"]
 ?>
+    <script>document.addEventListener('DOMContentLoaded', absenceTableLoadEvenlistners);</script>
     <div id="absenceTableContainer">
         <table id="absenceTable" class="overflow-auto">
             <thead>
