@@ -1,0 +1,38 @@
+#absenceTable{
+  thead{
+    th{
+    background-color: $dark-blue;
+    color: white;
+    }
+  }
+  & > tbody > tr > td:first-child{
+    background-color: $blue;
+    color: white;
+    div{
+      width: 75px;
+    }
+
+  }
+  td,th{
+    text-align: center;
+    div{
+      width: 40px;
+      min-height: 40px;
+    }
+    border: 1px black solid;
+
+  }
+
+  .noBorder{
+    border: none;
+    background-color: unset;
+  }
+
+}
+
+#absenceTableContainer{
+  overflow: auto;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+

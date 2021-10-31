@@ -16,6 +16,7 @@ body {
   top: 0;
   border-bottom: 3px solid #00A651;
   width: 100%;
+  max-width: device-with;
   height: 40px;
   border-bottom-right-radius: 15px;
   border-bottom-left-radius: 15px;
@@ -147,19 +148,18 @@ body {
 }
 
 #nav-content {
-  padding: 20px;
   position: absolute;
   width: auto;
   max-width: 75%;
-  top: 0;
   left: 0;
-  height: 100%;
+  height: calc(100% - 25px);
   background: white;
   pointer-events: auto;
   transform: translateX(-100%);
   transition: transform 0.3s;
   will-change: transform;
   contain: paint;
+  padding: 0 20px 20px;
 }
 #nav-content ul {
   height: 100%;
@@ -213,11 +213,6 @@ body {
 #nav-content ul {
   padding: 0;
   list-style: none;
-}
-#nav-content .spacer {
-  display: block;
-  width: 100%;
-  height: 5px;
 }
 
 /*****************
@@ -1062,6 +1057,36 @@ body {
   align-self: start;
 }
 
+#absenceTable thead th {
+  background-color: #184C6D;
+  color: white;
+}
+#absenceTable > tbody > tr > td:first-child {
+  background-color: #2D5D7B;
+  color: white;
+}
+#absenceTable > tbody > tr > td:first-child div {
+  width: 75px;
+}
+#absenceTable td, #absenceTable th {
+  text-align: center;
+  border: 1px black solid;
+}
+#absenceTable td div, #absenceTable th div {
+  width: 40px;
+  min-height: 40px;
+}
+#absenceTable .noBorder {
+  border: none;
+  background-color: unset;
+}
+
+#absenceTableContainer {
+  overflow: auto;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
 #absenceCards {
   padding-top: 10px;
   display: flex;
@@ -1138,6 +1163,11 @@ body {
 
 .notDone {
   background-color: #6b3f23;
+  color: white !important;
+}
+
+.uncompleted {
+  background-color: #ee9960;
   color: white !important;
 }
 

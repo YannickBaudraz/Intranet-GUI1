@@ -16,7 +16,13 @@ class mainController
         }
     }
 
-    public function showAbsencesCards(){
+    public function showAbsencesCards()
+    {
         require_once "templates/absencesCards.php";
+    }
+
+    public function showAbsencesTable()
+    {
+        require_once "templates/absencesTables.php";
     }
 }
