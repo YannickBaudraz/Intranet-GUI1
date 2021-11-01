@@ -2,11 +2,11 @@
 
 ob_start();
 ?>
-    <script>document.addEventListener('DOMContentLoaded', absenceToolsLoadEventListner);</script>
+    <script>document.addEventListener('DOMContentLoaded', absenceToolsLoadEventListner)</script>
     <div id="menu">
         <div></div>
         <h5 class="menu-title">
-            Gestion des abscences
+            Gestion des absences
         </h5>
         <div class="return-arrow">
             <i class="fas fa-arrow-circle-left"></i>
@@ -27,22 +27,40 @@ ob_start();
                 <li><a href="#">Cours</a></li>
                 <li><a href="#">Liste</a></li>
                 <hr>
-                <li><h6>Outils abscences:</h6></li>
-                <li><div class="btn toolBtn present">Présent</div></li>
-                <li><div class="btn toolBtn unjustified">Absence injustifiée</div></li>
-                <li><div class="btn toolBtn excluded">Exclusion</div></li>
-                <li><div class="btn toolBtn justified">Absence justifiée</div></li>
-                <li><div class="btn toolBtn expired">Ab. j. hors délai</div></li>
-                <li><div class="btn toolBtn granted">Congé accordé</div></li>
-                <li><div class="btn toolBtn late">Arrivée tardive</div></li>
-                <li><div class="btn toolBtn appointment">Rendez-vous / externe</div></li>
-                <li><div class="btn toolBtn restraint">Appui/Retenue</div></li>
-                <li><div class="btn toolBtn notDone">Devoir non fait</div></li>
+                <li><h6>Outils absences:</h6></li>
+                <li>
+                    <div class="btn toolBtn present">Présent</div>
+                </li>
+                <li>
+                    <div class="btn toolBtn unjustified">Absence injustifiée</div>
+                </li>
+                <li>
+                    <div class="btn toolBtn excluded">Exclusion</div>
+                </li>
+                <li>
+                    <div class="btn toolBtn justified">Absence justifiée</div>
+                </li>
+                <li>
+                    <div class="btn toolBtn expired">Ab. j. hors délai</div>
+                </li>
+                <li>
+                    <div class="btn toolBtn granted">Congé accordé</div>
+                </li>
+                <li>
+                    <div class="btn toolBtn late">Arrivée tardive</div>
+                </li>
+                <li>
+                    <div class="btn toolBtn appointment">Rendez-vous / externe</div>
+                </li>
+                <li>
+                    <div class="btn toolBtn restraint">Appui/Retenue</div>
+                </li>
+                <li>
+                    <div class="btn toolBtn notDone">Devoir non fait</div>
+                </li>
                 <li><div class="btn toolBtn erase">Effacer</div></li>
                 <br>
                 <li class="text-warning"><a class="validate" href="#"><div class="btn validate">Valider présences</div></a></li>
-                <br>
-                <br>
             </ul>
         </div>
     </div>

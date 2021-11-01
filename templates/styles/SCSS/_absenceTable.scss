@@ -1,36 +1,43 @@
-#absenceTable{
-  thead{
-    th{
-    background-color: $dark-blue;
-    color: white;
+#absenceTable {
+  thead {
+    th {
+      background-color: $dark-blue;
+      color: white;
+      padding: .5rem 0;
     }
   }
-  & > tbody > tr > td:first-child{
+
+  & > tbody > tr > td:first-child {
     background-color: $blue;
     color: white;
-    div{
-      width: 75px;
-    }
+    padding: 0 .5rem;
 
+    div {
+      white-space: nowrap;
+    }
   }
-  td,th{
+
+  td, th {
     text-align: center;
-    div{
-      width: 40px;
-      min-height: 40px;
-    }
-    border: 1px black solid;
 
+    div {
+      width: 5em;
+      min-height: 5em;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    border: 1px black solid;
   }
 
-  .noBorder{
+  .noBorder {
     border: none;
     background-color: unset;
   }
-
 }
 
-#absenceTableContainer{
+#absenceTableContainer {
   overflow: auto;
   padding-top: 5px;
   padding-bottom: 5px;

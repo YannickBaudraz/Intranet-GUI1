@@ -190,11 +190,11 @@
   contain: paint;
   padding: 0 20px 20px;
 
-
   ul {
     display: flex;
     flex-direction: column;
     list-style: none;
+    padding: 0;
   }
 
   li {
@@ -225,8 +225,6 @@
       width: 95%;
       border: 1px black solid;
       margin-bottom: 5px;
-
-
     }
   }
 
@@ -254,13 +252,6 @@
 
   h1, h2, h3, h4 {
     margin: 0;
-  }
-
-  ul {
-    padding: 0;
-    list-style: none;
-    padding-bottom: 30px;
-    margin-bottom: 30px;
   }
 }
 

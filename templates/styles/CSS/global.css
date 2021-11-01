@@ -173,6 +173,7 @@ body {
   display: flex;
   flex-direction: column;
   list-style: none;
+  padding: 0;
 }
 #nav-content li a {
   padding: 10px 5px;
@@ -216,12 +217,6 @@ body {
 }
 #nav-content h1, #nav-content h2, #nav-content h3, #nav-content h4 {
   margin: 0;
-}
-#nav-content ul {
-  padding: 0;
-  list-style: none;
-  padding-bottom: 30px;
-  margin-bottom: 30px;
 }
 
 /*****************
@@ -1067,23 +1062,28 @@ body {
 }
 
 #absenceTable thead th {
-  background-color: #184C6D;
+  background-color: #184c6d;
   color: white;
+  padding: 0.5rem 0;
 }
 #absenceTable > tbody > tr > td:first-child {
-  background-color: #2D5D7B;
+  background-color: #2d5d7b;
   color: white;
+  padding: 0 0.5rem;
 }
 #absenceTable > tbody > tr > td:first-child div {
-  width: 75px;
+  white-space: nowrap;
 }
 #absenceTable td, #absenceTable th {
   text-align: center;
   border: 1px black solid;
 }
 #absenceTable td div, #absenceTable th div {
-  width: 40px;
-  min-height: 40px;
+  width: 5em;
+  min-height: 5em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 #absenceTable .noBorder {
   border: none;
