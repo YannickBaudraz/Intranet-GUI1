@@ -14,15 +14,14 @@ body {
 #menu {
   position: fixed;
   top: 0;
-  border-bottom: 3px solid #00A651;
+  border-bottom: 3px solid #00a651;
   width: 100%;
-  max-width: device-with;
   height: 40px;
   border-bottom-right-radius: 15px;
   border-bottom-left-radius: 15px;
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
   padding-right: 10px;
   padding-left: 10px;
   background-color: inherit;
@@ -162,7 +161,6 @@ body {
   padding: 0 20px 20px;
 }
 #nav-content ul {
-  height: 100%;
   display: flex;
   flex-direction: column;
   list-style: none;
