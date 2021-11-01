@@ -34,11 +34,9 @@ function absenceToolsLoadEventListner(){
     var tools = document.getElementsByClassName("toolBtn");
     Array.from(tools).forEach((tool) =>{
         tool.addEventListener("click",function (tool){
-            if(this.classList[2] != "erase"){
+
                 selectedTool = this.classList[2];
-            }else{
-                selectedTool = "present";
-            }
+
             document.getElementById("nav-content").blur();
         });
     })

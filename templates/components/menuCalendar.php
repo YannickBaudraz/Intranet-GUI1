@@ -7,7 +7,7 @@ ob_start();
         <div class="menuWeek">
             <i class="fas fa-arrow-circle-left"></i>
             <?php if (count($menuDates) > 1): ?>
-                <div><span>Du <?= $menuDates[0] ?> au <?= $menuDates[1] ?> 2021</span></div>
+                <div class="weektext"><span>Du <?= $menuDates[0] ?> au <?= $menuDates[1] ?> 2021</span></div>
             <?php else: ?>
                 <div><span><?= $menuDates[0] ?> 2021</span></div>
             <?php endif; ?>

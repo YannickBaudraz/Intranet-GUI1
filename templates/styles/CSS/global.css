@@ -36,15 +36,24 @@ body {
   text-align: center;
   width: 80%;
   justify-content: center;
+  align-items: center;
 }
 #menu .menuWeek .fas {
-  font-size: 1.7em;
+  font-size: 2em;
   color: #2D5D7B;
 }
 #menu .menuWeek span {
   color: #00A651;
-  padding-left: 4px;
-  padding-right: 4px;
+  font-size: 15px;
+  text-align: center;
+}
+#menu .menuWeek .weektext {
+  padding-left: 7px;
+  padding-right: 7px;
+}
+#menu .menuWeek i {
+  margin-right: 5px;
+  margin-left: 5px;
 }
 #menu .menu-title {
   margin-top: unset;
@@ -213,6 +222,8 @@ body {
 #nav-content ul {
   padding: 0;
   list-style: none;
+  padding-bottom: 30px;
+  margin-bottom: 30px;
 }
 
 /*****************

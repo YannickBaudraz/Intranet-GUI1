@@ -5,7 +5,6 @@ ob_start();
 $eleves = ["Abrams Doe", "Batiste Doe", "Carl Joe", "Daniel Doe", "Etienne Doe", "Fionna Doe"]
 ?>
     <script>document.addEventListener('DOMContentLoaded', absenceTableLoadEvenlistners);</script>
-    <script>screen.orientation.lock('landscape');</script>
     <div id="absenceTableContainer">
         <table id="absenceTable" class="overflow-auto">
             <thead>
