@@ -41,8 +41,6 @@ ob_start();
                 <li><div class="btn toolBtn erase">Effacer</div></li>
                 <br>
                 <li class="text-warning"><a class="validate" href="#"><div class="btn validate">Valider présences</div></a></li>
-                <br>
-                <br>
             </ul>
         </div>
     </div>
