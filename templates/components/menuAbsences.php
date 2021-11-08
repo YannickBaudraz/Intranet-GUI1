@@ -9,7 +9,7 @@ ob_start();
             Gestion des absences
         </h5>
         <div class="return-arrow">
-            <i class="fas fa-arrow-circle-left"></i>
+            <a href="?"><i class="fas fa-arrow-circle-left"></i></a>
         </div>
     </div>
     <div id="menu-container">
