@@ -21,11 +21,20 @@ require_once $headerPath;
           rel="stylesheet">
     <link rel="stylesheet" href="templates/styles/CSS/global.css">
 
+
     <!-- JavaScript Bundle with Popper -->
 
     <script src="https://kit.fontawesome.com/3f7b822457.js" crossorigin="anonymous"></script>
     <script src="templates/scripts/absences.js"></script>
     <title>Intranet GUI-1</title>
+
+    <!-- Service worker -->
+    <link rel="manifest" href="manifest.json">
+    <script>
+        if('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('./sw.js', { scope: './' })
+        }
+    </script>
 </head>
 <body>
     <!-- HEADER -->
