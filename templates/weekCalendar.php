@@ -15,7 +15,7 @@ ob_start();
         <span class="track-slot row-s-tracks col-s-fr">Vendredi 12.11</span>
 
 
-        <div class="info col-s-week col-e-week">
+        <div class="info time-slot col-e-week">
             <div>Année 2021-2022</div>
             <div>1er semestre</div>
             <div>1er trimestre</div>

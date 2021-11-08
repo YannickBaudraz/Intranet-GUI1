@@ -1099,30 +1099,33 @@ body {
 #absenceCards {
   padding-top: 10px;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   flex-wrap: wrap;
   align-content: space-around;
+  gap: 1em;
 }
 #absenceCards .studentCard {
-  width: 45%;
-  max-width: 180px;
-  height: 200px;
+  padding: 5px;
   display: flex;
-  justify-content: center;
-  align-items: center;
   border-radius: 5px;
   margin-bottom: 5px;
   color: white;
 }
 #absenceCards .studentCard .picture {
-  background-size: 100% 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
   border-radius: 5px;
-  width: 95%;
-  height: 95%;
+  width: 170px;
+  height: 255px;
   display: flex;
-  justify-content: center;
   align-items: flex-end;
   text-align: center;
+}
+@media screen and (max-width: 768px) {
+  #absenceCards .studentCard .picture {
+    width: 120px;
+    height: 180px;
+  }
 }
 
 .present {
